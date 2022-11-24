@@ -5,25 +5,33 @@ Var
 
 
 Inicio
-   x <- 1
-   soma <- 1
-   enquanto soma > 0 faca
-       escreval ("Digite um número inteiro: ")
-       leia (x)
-   se (x <> 0) entao
+
+   escreval ("Digite um número inteiro: ")
+   leia (x)
+
+
+   se x mod 2 <> 0 entao
+      x <- x + 1
+   fimse
+   enquanto (x <> 0) faca
       enquanto (i < 5) faca
       soma <- soma + x
       x <- x + 2
       i <- i + 1
       fimenquanto
+   escreval ("SOMA = ",soma)
+   i <- 0
+   soma <- 0
+   escreval ("Digite um número inteiro: ")
+   leia (x)
+   se x mod 2 <> 0 entao
+      x <- x + 1
    fimse
-   escreval (soma)
    fimenquanto
 
-   
-   
-escreval (soma)
-   
+
+
+
 
    
    
