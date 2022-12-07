@@ -1,34 +1,37 @@
 Algoritmo "soma_impares"
 
 Var
-   x,y,i,soma:inteiro
+   x,y,i,troca,soma:inteiro
 
 Inicio
-   i <- 0
    soma <- 0
+   i <- 0
    escreval ("Digite dois números inteiros: ")
    leia (x)
    leia (y)
    
-   se x < y entao
-      para i de x ate y - 1 faca
-           enquanto i < 0 faca
-             i <- i + 1
-           fimenquanto
-           se i mod 2 > 0 entao
-              soma <- soma + i
-           fimse
-      fimpara
-   senao
-      para i de x ate y - 1 faca
-           se i mod 2 <> 0 entao
-              soma <- soma + i
-           fimse
-      fimpara
-      fimse
+   se X > Y entao
+      troca <- x
+      x <- y
+      y <- troca
    fimse
-   escreval ("A SOMA DOS IMPARES = ",soma)
-
    
+   
+   soma <- 0
+   para i de x+1 ate y-1 faca
+      se i % 2 <> 0 entao
+         soma <- soma + i
+      fimse
+   fimpara
+
+   escreval("SOMA DOS IMPARES = ", soma)
+   
+
+
+
+
+
+
+Fimalgoritmo
 
 Fimalgoritmo
